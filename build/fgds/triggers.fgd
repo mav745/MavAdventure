@@ -1,0 +1,25 @@
+@trigger_base
+{
+	target : string;
+	@filter_class : string;
+	@filter_name : string;
+}
+
+trigger_once : @trigger_base{}
+
+trigger_door: @trigger_base
+{
+	next_map     : file;
+	next_location: string;
+	landmark     : string;
+	transfer_key : stringlist (up,down,left,right);
+	locked		 : bool (FALSE);
+}
+trigger_multiple: @trigger_base
+{
+	reset_time : float;
+}
+trigger_teleport: @trigger_base
+{
+	targetname : string;
+}

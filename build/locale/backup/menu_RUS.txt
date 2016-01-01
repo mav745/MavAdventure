@@ -1,0 +1,17 @@
+#Story;Сюжет
+#FreePlay;Фриплэй
+#DuelMode;Режим Дуэли
+#Controls;Управление
+#Extras;Экстра
+#SoundTest;Тест Звука
+#Exit;Выход
+#up;вверх
+#left;влево
+#down;вниз
+#right;вправо
+#start;старт
+#special;спец
+#jump;прыжок
+#attack;атака
+#OK;ОК
+#Cancel;Отмена

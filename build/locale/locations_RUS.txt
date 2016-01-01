@@ -1,0 +1,9 @@
+#Indoor;Проходная
+#LoadingRoom;Комната загрузки
+#Streets;Улицы
+#MavHouse;Дом Мэврика
+#ToArena;На Арену
+#mavhousefloor1;В дом
+#mavyard;Во двор
+#cyberarena;Кибер-Арена
+#visionPlaza;Вижн-Плаза

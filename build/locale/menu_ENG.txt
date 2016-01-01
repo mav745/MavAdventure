@@ -1,0 +1,17 @@
+#Story;Story
+#FreePlay;Free Play
+#DuelMode;Duel Mode
+#Controls;Controls
+#Extras;Extras
+#SoundTest;Sound Test
+#Exit;Exit
+#up;up
+#left;left
+#down;down
+#right;right
+#start;start
+#special;special
+#jump;jump
+#attack;attack
+#OK;OK
+#Cancel;Cancel

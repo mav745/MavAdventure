@@ -1,0 +1,72 @@
+@base
+{
+	@mins: vector2(-16,-16);
+	@maxs: vector2( 16,16);
+	@color: color (255,0,255);
+	@sprite: string;
+	image_alpha: float(1.0);
+	x_scroll: float(1.0);
+	y_scroll: float(1.0);
+}
+@baseplayer:@base
+{
+	@mins: vector2(-32,-32);
+	@maxs: vector2( 32,32);
+	@color: color (0,255,0);
+}
+@basenpc:@base
+{
+	@mins: vector2(-32,-32);
+	@maxs: vector2( 32,32);
+	@color: color (255,192,0);
+	targetname: string;
+}
+cycler_sprite:@base
+{
+	sprite_file: file;
+	num_frames: int(1);
+	loop: bool(false);
+	image_speed: float(0.3);
+	start_frame: int(0);
+	x_scale: float(1.0);
+	y_scale: float(1.0);
+}
+info_player_deathmatch:@base
+{
+	@mins: vector2(-15,-31);
+	@maxs: vector2( 15, 31);
+	@color: color (192,255,0);
+}
+info_dialog:@base
+{
+	@color: color (255,255,255);
+	@sprite: string(res/editor/sprites/info_dialog.png);
+	targetname: string;
+	target: string;
+	dialog_file: file;
+	
+}
+info_target:@base
+{
+	@sprite: string(res/editor/sprites/info_target.png);
+	targetname: string;
+}
+info_landmark:@base
+{
+	@sprite: string(res/editor/sprites/info_landmark.png);
+	targetname: string;
+	@color: color (192,192,192);
+}
+maverick:@baseplayer
+{
+	@mins: vector2(-15,-31);
+	@maxs: vector2( 15, 31);
+	@color: color (64,255,64);
+	has_gauss: bool(false);
+}
+npc_hellen:@basenpc
+{
+	@mins: vector2(-15,-31);
+	@maxs: vector2( 15,31);
+	@color: color (112,54,44);
+}

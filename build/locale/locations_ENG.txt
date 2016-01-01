@@ -1,0 +1,9 @@
+#Indoor;Lobby
+#LoadingRoom;Loading room
+#Streets;Streets
+#MavHouse;Mav's House
+#ToArena;To Arena
+#mavhousefloor1;Inside
+#mavyard;Yard
+#cyberarena;Cyber-Arena
+#visionPlaza;Vision-Plaza
