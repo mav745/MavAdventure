@@ -1,0 +1,1685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>962</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="3" rowspan="6">
+     <widget class="QFrame" name="frame_3">
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>160</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="but_ScrollEf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>51</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Scroll Ef</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="6">
+     <widget class="QFrame" name="toolFrameRef">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>159</width>
+        <height>582</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>159</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>161</width>
+         <height>581</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="emptyPage"/>
+       <widget class="QWidget" name="tileToolPage">
+        <widget class="QFrame" name="tileToolFrame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>159</width>
+           <height>582</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>159</width>
+           <height>582</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>159</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="cTBrushBrowser" name="frame_brush">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>440</y>
+            <width>128</width>
+            <height>128</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="cTSetBrowser" name="frame_tset">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>179</y>
+            <width>128</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="list_layers">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>25</y>
+            <width>71</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="maxVisibleItems">
+           <number>32</number>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerAdd">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>55</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerRemove">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>55</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Rem</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>1</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Layers</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerChangeD">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>85</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ch. Depth</string>
+          </property>
+         </widget>
+         <widget class="Line" name="line_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>385</y>
+            <width>161</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerChangeT">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>85</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ch. Tileset</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_ScrollFac">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>128</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Scroll Fac</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerVisible">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>25</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Visibility</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_BrushClear">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>410</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerShift">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>115</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Shift</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_LayerScrFacX">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>150</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_LayerScrFacY">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>150</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_layerDuplicate">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>55</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dup</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_TileMirHor">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>410</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Hor</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_TileMirVer">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>410</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ver</string>
+          </property>
+         </widget>
+         <zorder>line_3</zorder>
+         <zorder>frame_brush</zorder>
+         <zorder>frame_tset</zorder>
+         <zorder>list_layers</zorder>
+         <zorder>but_layerAdd</zorder>
+         <zorder>but_layerRemove</zorder>
+         <zorder>label_3</zorder>
+         <zorder>but_layerChangeD</zorder>
+         <zorder>but_layerChangeT</zorder>
+         <zorder>but_ScrollFac</zorder>
+         <zorder>but_layerVisible</zorder>
+         <zorder>but_BrushClear</zorder>
+         <zorder>but_layerShift</zorder>
+         <zorder>text_LayerScrFacX</zorder>
+         <zorder>text_LayerScrFacY</zorder>
+         <zorder>but_layerDuplicate</zorder>
+         <zorder>but_TileMirHor</zorder>
+         <zorder>but_TileMirVer</zorder>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="lineToolPage">
+        <widget class="QFrame" name="lineToolFrame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>159</width>
+           <height>582</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>159</width>
+           <height>582</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>159</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="but_lineShift">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>55</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Shift All</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="list_linesMode">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>23</y>
+            <width>81</width>
+            <height>22</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>3</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Mode</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spin_CircSides">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>23</y>
+            <width>42</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="minimum">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <number>16</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>3</y>
+            <width>41</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Sides</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_Flip">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>55</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Flip</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>85</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Save Pr</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>85</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Import Pr</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_lineJDown">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>115</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>JumpDown</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_MirrorH">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>150</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Hor</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_MirrorV">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>150</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ver</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>18</x>
+            <y>151</y>
+            <width>51</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Mirror:</string>
+          </property>
+         </widget>
+         <widget class="Line" name="line_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>136</y>
+            <width>161</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_linesVisible">
+          <property name="geometry">
+           <rect>
+            <x>91</x>
+            <y>115</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Visibility</string>
+          </property>
+         </widget>
+         <zorder>label_4</zorder>
+         <zorder>label_2</zorder>
+         <zorder>but_lineShift</zorder>
+         <zorder>list_linesMode</zorder>
+         <zorder>spin_CircSides</zorder>
+         <zorder>but_Flip</zorder>
+         <zorder>pushButton_2</zorder>
+         <zorder>pushButton_3</zorder>
+         <zorder>but_lineJDown</zorder>
+         <zorder>but_MirrorH</zorder>
+         <zorder>but_MirrorV</zorder>
+         <zorder>label_7</zorder>
+         <zorder>line_2</zorder>
+         <zorder>but_linesVisible</zorder>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="backsToolPage">
+        <widget class="QFrame" name="backsToolFrame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>159</width>
+           <height>582</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>159</width>
+           <height>582</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>159</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QComboBox" name="list_Backs">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>23</y>
+            <width>74</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="currentText">
+           <string/>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToContents</enum>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="duplicatesEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="modelColumn">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>3</y>
+            <width>141</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Backgrounds</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_AddBack">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_RemoveBack">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>70</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Remove</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_changeBackDepth">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>100</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ch. Depth</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_changeBack">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ch. Back</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_backScrFac">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>140</y>
+            <width>81</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Scroll Factor</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_backScrSpd">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>210</y>
+            <width>81</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Scroll Speed</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_backOrig">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>280</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Origin</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackOrigX">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>310</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackScrSpdX">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>240</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackScrFacX">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>170</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackOrigY">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>310</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackScrSpdY">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>240</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackScrFacY">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>170</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame">
+          <property name="geometry">
+           <rect>
+            <x>-1</x>
+            <y>270</y>
+            <width>161</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_5">
+          <property name="geometry">
+           <rect>
+            <x>-1</x>
+            <y>130</y>
+            <width>161</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="chk_VRep">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>370</y>
+            <width>41</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ver</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="chk_HRep">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>343</y>
+            <width>41</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Hor</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>344</y>
+            <width>71</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Back Repeat</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="text_BackDepth">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>43</y>
+            <width>141</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_backVis">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>410</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Visibility</string>
+          </property>
+         </widget>
+         <widget class="Line" name="line">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>375</y>
+            <width>161</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>410</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Fit Room</string>
+          </property>
+         </widget>
+         <zorder>frame_5</zorder>
+         <zorder>frame</zorder>
+         <zorder>line</zorder>
+         <zorder>label_6</zorder>
+         <zorder>list_Backs</zorder>
+         <zorder>label_5</zorder>
+         <zorder>but_AddBack</zorder>
+         <zorder>but_RemoveBack</zorder>
+         <zorder>but_changeBackDepth</zorder>
+         <zorder>but_changeBack</zorder>
+         <zorder>but_backScrFac</zorder>
+         <zorder>but_backScrSpd</zorder>
+         <zorder>but_backOrig</zorder>
+         <zorder>text_BackOrigX</zorder>
+         <zorder>text_BackScrSpdX</zorder>
+         <zorder>text_BackScrFacX</zorder>
+         <zorder>text_BackOrigY</zorder>
+         <zorder>text_BackScrSpdY</zorder>
+         <zorder>text_BackScrFacY</zorder>
+         <zorder>chk_HRep</zorder>
+         <zorder>chk_VRep</zorder>
+         <zorder>text_BackDepth</zorder>
+         <zorder>but_backVis</zorder>
+         <zorder>pushButton</zorder>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="roomSetPage">
+        <widget class="QFrame" name="roomSetFrame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>159</width>
+           <height>582</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>159</width>
+           <height>582</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>159</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QCheckBox" name="chk_HorBlock">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>131</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Hor. Block </string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="chk_DownBlock">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>131</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Down Block </string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="chk_UpBlock">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>131</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Up Block </string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="entityToolPage">
+        <widget class="QFrame" name="entityToolFrame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>159</width>
+           <height>582</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>159</width>
+           <height>582</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>159</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QComboBox" name="list_Entities">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>141</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="currentText">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>141</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Entity type</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_chEntDepth">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ch. Depth</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="but_ShiftAllEnts">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Shift All</string>
+          </property>
+         </widget>
+         <zorder>label_8</zorder>
+         <zorder>list_Entities</zorder>
+         <zorder>but_chEntDepth</zorder>
+         <zorder>but_ShiftAllEnts</zorder>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="triggsToolPage">
+        <widget class="QFrame" name="triggsToolFrame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>159</width>
+           <height>582</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>159</width>
+           <height>582</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>159</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="but_ShiftAllTrigs">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Shift All</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2" alignment="Qt::AlignTop">
+     <widget class="QFrame" name="frame_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>643</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="cLineToolButton" name="butLines">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Lines</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>3</y>
+         <width>46</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>TOOLS:</string>
+       </property>
+      </widget>
+      <widget class="cTileToolButton" name="butTiles">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>30</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Tiles</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="cBacksToolButton" name="butBacks">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>30</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Backs</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="cEntitiesToolButton" name="butEnts">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>30</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Entties</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="cTriggsToolButton" name="butTrigs">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>30</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Triggers</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="cRoomToolButton" name="butRoom">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>30</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Room</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>30</y>
+         <width>75</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Verdana</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>PLAY!</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QFrame" name="glFrame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>643</width>
+        <height>482</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+        <stylestrategy>PreferDefault</stylestrategy>
+       </font>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>toolFrameRef</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>frame_2</zorder>
+   <zorder>glFrame</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>962</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="tearOffEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_ass"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_TODO">
+    <property name="title">
+     <string>//TODO</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menu_TODO"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_ass">
+   <property name="text">
+    <string>Save ass</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>cLineToolButton</class>
+   <extends>QPushButton</extends>
+   <header>toolbuttons.h</header>
+  </customwidget>
+  <customwidget>
+   <class>cTileToolButton</class>
+   <extends>QPushButton</extends>
+   <header>toolbuttons.h</header>
+  </customwidget>
+  <customwidget>
+   <class>cTBrushBrowser</class>
+   <extends>QFrame</extends>
+   <header>cTileTool.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>cTSetBrowser</class>
+   <extends>QFrame</extends>
+   <header>cTileTool.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>cBacksToolButton</class>
+   <extends>QPushButton</extends>
+   <header>toolbuttons.h</header>
+  </customwidget>
+  <customwidget>
+   <class>cTriggsToolButton</class>
+   <extends>QPushButton</extends>
+   <header>toolbuttons.h</header>
+  </customwidget>
+  <customwidget>
+   <class>cEntitiesToolButton</class>
+   <extends>QPushButton</extends>
+   <header>toolbuttons.h</header>
+  </customwidget>
+  <customwidget>
+   <class>cRoomToolButton</class>
+   <extends>QPushButton</extends>
+   <header>toolbuttons.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
