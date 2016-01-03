@@ -288,22 +288,25 @@ cGameRoom * cGameRoom::LoadFromFile(const QString &filename)
 		//qDebug()<<"num walls"<<m_Walls.size();
 		int sz2;
 		DS>>sz;	//fread(&sz,4,1,pf); //numtriggers
+		//DBG_PRINT_S(QString("numtriggers: ")+QString::number(sz));
 		for(int i=0;i<sz;i++)
 		{
 			//cBaseTrigger *pT = (cBaseTrigger *)GET_OBJECT(trigger);
 			DS>>sz2;	//fread(&sz2,4,1,pf); //numparts
+			//qDebug()<<"numparts"<<sz2;
 			QVector<float>verts;
 			for(int j=0;j<sz2;j++)
 			{
-				float sx,sy,ex,ey;
-				DS>>sx;
-				DS>>sy;
-				DS>>ex;
-				DS>>ey;
-				verts.push_back(sx);
-				verts.push_back(sy);
-				verts.push_back(ex);
-				verts.push_back(ey);
+				//float sx,sy,ex,ey;
+				QVector2D s,e;
+				DS>>s;
+				//DS>>sy;
+				DS>>e;
+				//DS>>ey;
+				verts.push_back(s.x());
+				verts.push_back(s.y());
+				verts.push_back(e.x());
+				verts.push_back(e.y());
 				//pT->AddRectShape(QVector2D(sx,sy),QVector2D(ex,ey));
 			}
 			//g_pTriggsTool->m_Triggs.push_back(pT);
@@ -312,7 +315,7 @@ cGameRoom * cGameRoom::LoadFromFile(const QString &filename)
 			cBaseObject *pEnt = pNewRoom->CreateObject(qstr);
 			if (!pEnt)
 			{
-				DBG_PRINT_S("Unknown entity: "+qstr);
+				DBG_PRINT_S(QString("Unknown entity: ")+qstr);
 			}
 			else
 			{
@@ -328,11 +331,32 @@ cGameRoom * cGameRoom::LoadFromFile(const QString &filename)
 			//pT->SetEntityType(qstr);
 			DS>>sz2;
 			//qDebug()<<"reading fields";
+			QString filed, value;
+			uint strsz;
+			//QChar qch;
+			ushort uch;
 			for(int i = 0;i<sz2;i++)
 			{
-				QString filed, value;
-				DS>>filed;	//freadstr(&filed,pf);
-				DS>>value;	//freadstr(&value,pf);
+				filed.clear();
+				value.clear();
+				
+				DS>>strsz;
+				strsz>>=1;
+				while(strsz-->0)
+				{
+					DS>>uch;
+					filed += QChar(uch);
+				}
+				
+				DS>>strsz;
+				strsz>>=1;
+				while(strsz-->0)
+				{
+					DS>>uch;
+					value += QChar(uch);
+				}
+				//DS>>filed;	//freadstr(&filed,pf);
+				//DS>>value;	//freadstr(&value,pf);
 				if (pEnt)
 				{
 					pEnt->ParseKeyValue(filed,value);
@@ -343,11 +367,14 @@ cGameRoom * cGameRoom::LoadFromFile(const QString &filename)
 		//g_pTriggsTool->m_SelectedTriggs.clear();
 		
 		DS>>sz;	//fread(&sz,4,1,pf); //numentities
+		//DBG_PRINT_S("numentities "+sz);
+		//qDebug()<<"numentities"<<sz;
 		for(int i=0;i<sz;i++)
 		{
 			int objDepth;
 			QVector2D orig;
 			DS>>orig>>objDepth>>qstr;	
+			
 			cBaseObject *pEnt = pNewRoom->CreateObject(qstr);
 			if (pEnt)
 			{
@@ -360,7 +387,7 @@ cGameRoom * cGameRoom::LoadFromFile(const QString &filename)
 			}
 			else
 			{
-				DBG_PRINT_S("Unknown entity: "+qstr);
+				DBG_PRINT_S(QString("Unknown entity: ")+qstr);
 			}
 			DS>>sz2;
 

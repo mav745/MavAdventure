@@ -411,7 +411,11 @@ void cInfoDialog::ParseKeyValue(const QString &key, const QString &value)
 {
 	if (key == "dialog_file")
 	{
-		QString filename = value+"_"+g_Language+".txt";
+		QString filename = value;
+		filename.remove("_RUS.txt");
+		filename.remove("_ENG.txt");
+		filename += "_"+g_Language+".txt";
+		
 		QFile dlgFile(QDir::currentPath()+"/"+filename);
 		if (dlgFile.open(QFile::ReadOnly))
 		{

@@ -7,3 +7,4 @@
 #mavyard;Во двор
 #cyberarena;Кибер-Арена
 #visionPlaza;Вижн-Плаза
+#buildplace;Стройка

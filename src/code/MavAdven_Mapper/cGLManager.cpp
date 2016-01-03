@@ -927,6 +927,8 @@ void cGLManager::Save()
 		}
 		
 		int sz2;
+		
+		
 		sz = g_pTriggsTool->m_Triggs.size();
 		DS<<sz;
 		for(int i=0;i<sz;i++)
@@ -941,8 +943,21 @@ void cGLManager::Save()
 			}
 
 			DS<<g_pTriggsTool->m_Triggs[i]->m_pEntity->type_name;//fwritestr(&g_pTriggsTool->m_Triggs[i]->m_pEntity->type_name,pf);
-			DS<<g_pTriggsTool->m_Triggs[i]->m_pEntity->fields.size();
+			int numfields = 0;
+			
 			QMap<QString, value_s *>::iterator it;
+			for(it  = g_pTriggsTool->m_Triggs[i]->m_pEntity->fields.begin();
+				 it != g_pTriggsTool->m_Triggs[i]->m_pEntity->fields.end();
+				 it ++)
+			{
+				QString name;
+				name = it.key();
+				if (name.startsWith('@')) continue; //don't save system fields
+				numfields++;
+			}
+			DS<<numfields;
+			//DS<<g_pTriggsTool->m_Triggs[i]->m_pEntity->fields.size();
+			//QMap<QString, value_s *>::iterator it;
 			for(it  = g_pTriggsTool->m_Triggs[i]->m_pEntity->fields.begin();
 				 it != g_pTriggsTool->m_Triggs[i]->m_pEntity->fields.end();
 				 it ++)
