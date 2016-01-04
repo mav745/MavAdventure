@@ -5,10 +5,14 @@
 
 #include <QTimer>
 
+#include <QDebug>
+
 MainWindow * MainWindow::s_WND = NULL;
 
 QMap <int, int> g_KeysMap, g_KeyMapPrev;
+QPoint g_MousePos;
 QPoint g_MouseOfs, g_MousePrev;
+int g_MouseWheel;
 
 QTimer *g_Timer;
 
@@ -27,16 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::ProcessInput(void)
 {
-    if (ui->fieldAnimPreview->hasFocus())
-    {
-        if (MainWindow::KeyState(Qt::Key_Space) & KS_DOWN)
-        {
-            if (MainWindow::KeyState(Qt::LeftButton) & KS_DOWN)
-            {
-                ui->fieldAnimPreview->m_Scroll -= g_MouseOfs;
-            }
-        }
-    }
+    ui->fieldAnimPreview->ProcessInput();
 	
 	//TODO
 	
@@ -47,7 +42,7 @@ void MainWindow::ProcessInput(void)
 void MainWindow::paintEvent(QPaintEvent *e)
 {
 	QMap <int, int>::iterator it;
-	for(it = g_KeysMap.begin();it != g_KeysMap.end();it++)
+    for(it = g_KeysMap.begin(); it != g_KeysMap.end(); it++)
 	{
 		it.value() &= ~(KS_PRESSED && KS_RELEASED);
 		
@@ -63,13 +58,14 @@ void MainWindow::paintEvent(QPaintEvent *e)
 	
 	ProcessInput();
 	
+    g_MouseWheel = 0;
 	g_MouseOfs = QPoint(0,0);
 	g_KeyMapPrev = g_KeysMap;
 }
 
 void MainWindow::wheelEvent(QWheelEvent *e)
 {
-	//TODO
+    g_MouseWheel = e->angleDelta().y();
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *e)
@@ -77,6 +73,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *e)
 	if (g_MousePrev != QPoint(0,0))
 		g_MouseOfs += e->pos() - g_MousePrev;
 	
+    g_MousePos = e->pos();
 	g_MousePrev = e->pos();
 }
 

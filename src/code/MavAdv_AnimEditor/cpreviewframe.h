@@ -11,7 +11,9 @@ class CPreviewFrame : public QFrame
 public:
 	QPoint m_Scroll;
     QImage m_Bkg;
+    int m_Scale;
 	explicit CPreviewFrame(QWidget *parent = 0);
+    void ProcessInput(void);
 
 protected:
 	void paintEvent(QPaintEvent *e);

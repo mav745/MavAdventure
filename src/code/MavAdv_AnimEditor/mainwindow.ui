@@ -29,6 +29,12 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::WheelFocus</enum>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="3" column="10">
      <widget class="QScrollBar" name="vscrlStrips">

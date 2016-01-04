@@ -24,6 +24,7 @@ public:
 	static Ui::MainWindow * GetUi(void);
 	static int KeyState(int key);
 	void ProcessInput();
+    static MainWindow * s_WND;
 protected:
 	void keyPressEvent(QKeyEvent *e);
 	void keyReleaseEvent(QKeyEvent *e);
@@ -33,7 +34,6 @@ protected:
 	void mouseMoveEvent(QMouseEvent *e);
 	void wheelEvent(QWheelEvent *e);
 private:
-	static MainWindow * s_WND;
 	Ui::MainWindow *ui;
 };
 
