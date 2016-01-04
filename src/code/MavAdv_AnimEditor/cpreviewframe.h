@@ -9,8 +9,9 @@ class CPreviewFrame : public QFrame
 	
 public:
 	QPoint m_Scroll;
+    QImage m_Bkg;
 	explicit CPreviewFrame(QWidget *parent = 0);
-	
+
 protected:
 	void paintEvent(QPaintEvent *e);
 	void resizeEvent(QResizeEvent *e);

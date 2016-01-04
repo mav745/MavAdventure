@@ -27,13 +27,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::ProcessInput(void)
 {
-	if (MainWindow::KeyState(Qt::Key_Space) & KS_DOWN)
-	{
-		if (MainWindow::KeyState(Qt::LeftButton) & KS_DOWN)
-		{
-			ui->fieldAnimPreview->m_Scroll -= g_MouseOfs;
-		}
-	}
+    if (ui->fieldAnimPreview->hasFocus())
+    {
+        if (MainWindow::KeyState(Qt::Key_Space) & KS_DOWN)
+        {
+            if (MainWindow::KeyState(Qt::LeftButton) & KS_DOWN)
+            {
+                ui->fieldAnimPreview->m_Scroll -= g_MouseOfs;
+            }
+        }
+    }
 	
 	//TODO
 	
