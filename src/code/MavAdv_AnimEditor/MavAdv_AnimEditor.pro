@@ -16,9 +16,13 @@ DESTDIR = ../../../build
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    cpreviewframe.cpp
+    cpreviewframe.cpp \
+    cstripframesframe.cpp \
+    util.cpp
 
 HEADERS  += mainwindow.h \
-    cpreviewframe.h
+    cpreviewframe.h \
+    cstripframesframe.h \
+    util.h
 
 FORMS    += mainwindow.ui
