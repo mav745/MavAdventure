@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    cpreviewframe.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    cpreviewframe.h
 
 FORMS    += mainwindow.ui
