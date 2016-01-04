@@ -10,6 +10,7 @@
 
 CPreviewFrame::CPreviewFrame(QWidget *parent) : QFrame(parent)
 {
+	m_Init = false;
     m_Scroll = QPoint(0, 0);
     m_Bkg = QImage(QDir::currentPath()+"/res/editor/chess_grid.png");
 }
@@ -17,7 +18,11 @@ CPreviewFrame::CPreviewFrame(QWidget *parent) : QFrame(parent)
 
 void CPreviewFrame::resizeEvent(QResizeEvent *e)
 {
-
+	if (!m_Init)
+	{
+		m_Scroll = -QPoint(width()>>1,height()>>1);
+		m_Init = true;
+	}
 }
 
 void CPreviewFrame::paintEvent(QPaintEvent *e)

@@ -7,6 +7,7 @@ class CPreviewFrame : public QFrame
 {
 	Q_OBJECT
 	
+	bool m_Init;
 public:
 	QPoint m_Scroll;
     QImage m_Bkg;
