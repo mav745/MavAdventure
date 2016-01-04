@@ -11,6 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = MavAdv_AnimEditor
 TEMPLATE = app
 
+DESTDIR = ../../../build
+
 
 SOURCES += main.cpp\
         mainwindow.cpp \
