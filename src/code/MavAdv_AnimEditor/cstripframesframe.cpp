@@ -26,6 +26,8 @@ CStripFramesFrame::CStripFramesFrame(QWidget *parent) : QFrame(parent)
     m_FrameList = new imgList_t;
 
     QImage Strip(QDir::currentPath()+"/res/sprites/s_mav_run.png");
+
+
     for(int i=0; i<m_NumFrames; i++)
     {
         m_FrameList->push_back( new QImage( Strip.copy(i*m_FrameW, 0, m_FrameW, m_FrameH) ) );
@@ -45,7 +47,7 @@ void CStripFramesFrame::ProcessInput()
 	
 	if (MainWindow::KeyState(Qt::LeftButton) & KS_RELEASED) //PRESS should drag'n'drop
 	{
-		int sel_pos = (mouse_local.y()+spos-TOP_SPACING)/(m_FrameW+FRAME_SPACING);
+        int sel_pos = (mouse_local.y()+spos-TOP_SPACING)/(m_FrameH+FRAME_SPACING);
 		if (MainWindow::s_bCtrl)
 		{
 			//invert item selection
@@ -106,24 +108,20 @@ void CStripFramesFrame::paintEvent(QPaintEvent *e)
     m_ScrollY = MainWindow::GetUi()->vscrlStripFrames->sliderPosition();
 
 	
-	//MAV: o_O
-    int sx = 64; // ?
-    int sy = 64; // ?
-    int cx = width()/2; // ?
-    int cy = 8; // ?
-    int x = cx - sx/2; // ?
+    int CenterX = width()/2; // center of field
+    int Left = CenterX - m_FrameW/2; // left spacing to draw frame
 
     QPainter p(this);
     p.translate(0, -m_ScrollY);
-    for(int i = 0; i<m_FrameList->size(); i++)
+    for(int i = 0; i<m_NumFrames; i++)
     {
-        p.drawImage(x, cy+i*(sy+16), *m_FrameList->at(i));
+        p.drawImage(Left, TOP_SPACING+i*(m_FrameH+16), *m_FrameList->at(i));
 		if (m_SelFrames.indexOf(i) != -1)
 			p.setPen(QColor(255,0,0));
 		else
 			p.setPen(QColor(0,0,0));
-        p.drawRect(x-1, cy+i*(sy+16)-1, sx+2, sy+2);
-        p.drawText(cx-16, cy+i*(sy+16)+64, 32, 14, Qt::AlignTop|Qt::AlignCenter, QString::number(i));
+        p.drawRect(Left-1, TOP_SPACING+i*(m_FrameH+FRAME_SPACING)-1, m_FrameW+2, m_FrameH+2);
+        p.drawText(CenterX-16, TOP_SPACING+i*(m_FrameH+FRAME_SPACING)+m_FrameH, 32, 14, Qt::AlignTop|Qt::AlignCenter, QString::number(i));
     }
 
     QFrame::paintEvent(e);

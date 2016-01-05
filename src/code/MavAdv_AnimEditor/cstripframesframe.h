@@ -20,7 +20,7 @@ class CStripFramesFrame : public QFrame
 		int m_FrameH;
 		int m_FrameW;
 		int m_NumFrames;
-		
+
 		QVector<int> m_SelFrames;
 		
         explicit CStripFramesFrame(QWidget *parent = 0);
@@ -28,6 +28,8 @@ class CStripFramesFrame : public QFrame
 		void ProcessInput(void);
 		
         ~CStripFramesFrame();
+    public slots:
+        void Reload(cStripLayer *pLayer);
     protected:
             void paintEvent(QPaintEvent *e);
 };
