@@ -7,6 +7,7 @@ namespace Ui {
 	class MainWindow;
 }
 
+#define CLAMP(l,x,r) (x < l ? l : (x > r ? r : x))
 
 #define	KS_UP (1<<0)
 #define	KS_PRESSED (1<<1)
@@ -25,6 +26,10 @@ public:
 	static int KeyState(int key);
 	void ProcessInput();
     static MainWindow * s_WND;
+	static bool s_bShift;
+	static bool s_bCtrl;
+	static bool s_bAlt;
+	static bool s_bSpace;
 protected:
 	void keyPressEvent(QKeyEvent *e);
 	void keyReleaseEvent(QKeyEvent *e);

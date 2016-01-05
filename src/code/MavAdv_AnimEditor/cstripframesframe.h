@@ -2,8 +2,11 @@
 #define CSTRIPFRAMESFRAME_H
 
 #include <QFrame>
+#include <util.h>
+#include <QVector>
 
-typedef QVector<QImage*> imgList_t;
+#define TOP_SPACING 8
+#define FRAME_SPACING 16
 
 class CStripFramesFrame : public QFrame
 {
@@ -11,10 +14,19 @@ class CStripFramesFrame : public QFrame
 
     public:
         imgList_t *m_FrameList;
+		
         int m_ScrollY;
         int m_ScrollHeight;
+		int m_FrameH;
+		int m_FrameW;
+		int m_NumFrames;
+		
+		QVector<int> m_SelFrames;
+		
         explicit CStripFramesFrame(QWidget *parent = 0);
 
+		void ProcessInput(void);
+		
         ~CStripFramesFrame();
     protected:
             void paintEvent(QPaintEvent *e);

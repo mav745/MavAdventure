@@ -13,16 +13,21 @@ TEMPLATE = app
 
 DESTDIR = ../../../build
 
-
 SOURCES += main.cpp\
         mainwindow.cpp \
     cpreviewframe.cpp \
     cstripframesframe.cpp \
-    util.cpp
+    util.cpp \
+    canimframebar.cpp \
+    cbasenode.cpp \
+    cstriplayer.cpp
 
 HEADERS  += mainwindow.h \
     cpreviewframe.h \
     cstripframesframe.h \
-    util.h
+    util.h \
+    canimframebar.h \
+    cbasenode.h \
+    cstriplayer.h
 
 FORMS    += mainwindow.ui

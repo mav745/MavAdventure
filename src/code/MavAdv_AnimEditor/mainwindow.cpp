@@ -8,6 +8,10 @@
 #include <QDebug>
 
 MainWindow * MainWindow::s_WND = NULL;
+bool MainWindow::s_bShift = false;
+bool MainWindow::s_bCtrl = false;
+bool MainWindow::s_bAlt = false;
+bool MainWindow::s_bSpace = false;
 
 QMap <int, int> g_KeysMap, g_KeyMapPrev;
 QPoint g_MousePos;
@@ -32,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::ProcessInput(void)
 {
     ui->fieldAnimPreview->ProcessInput();
+	ui->fieldStripFrames->ProcessInput();
 	
 	//TODO
 	
@@ -44,7 +49,7 @@ void MainWindow::paintEvent(QPaintEvent *e)
 	QMap <int, int>::iterator it;
     for(it = g_KeysMap.begin(); it != g_KeysMap.end(); it++)
 	{
-		it.value() &= ~(KS_PRESSED && KS_RELEASED);
+		it.value() &= ~(KS_PRESSED | KS_RELEASED);
 		
 		if (!g_KeyMapPrev.contains(it.key())) continue;
 		int value_prev = g_KeyMapPrev[it.key()];
@@ -53,8 +58,15 @@ void MainWindow::paintEvent(QPaintEvent *e)
 			it.value() |= KS_PRESSED;
 		
 		if (!(it.value() & KS_DOWN) &&  (value_prev & KS_DOWN))
+		{
 			it.value() |= KS_RELEASED;
+		}
 	}
+	
+	s_bShift = KeyState(Qt::Key_Shift) & KS_DOWN;
+	s_bCtrl = KeyState(Qt::Key_Control) & KS_DOWN;
+	s_bAlt = (KeyState(Qt::Key_Alt) & KS_DOWN) | (KeyState(Qt::Key_AltGr) & KS_DOWN);
+	s_bSpace = KeyState(Qt::Key_Space) & KS_DOWN;
 	
 	ProcessInput();
 	

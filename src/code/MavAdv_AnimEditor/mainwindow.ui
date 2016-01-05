@@ -35,373 +35,486 @@
    <property name="focusPolicy">
     <enum>Qt::WheelFocus</enum>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="10">
-     <widget class="QScrollBar" name="vscrlStrips">
-      <property name="minimumSize">
-       <size>
-        <width>16</width>
-        <height>91</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16</width>
-        <height>91</height>
-       </size>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="lblFrames">
-      <property name="minimumSize">
-       <size>
-        <width>64</width>
-        <height>13</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>47</width>
-        <height>13</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>Frames:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1" rowspan="2">
-     <widget class="QScrollBar" name="vscrlStripFrames">
-      <property name="minimumSize">
-       <size>
-        <width>16</width>
-        <height>341</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="lblAnims">
-      <property name="minimumSize">
-       <size>
-        <width>64</width>
-        <height>13</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>47</width>
-        <height>13</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>Animations:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="3">
-     <widget class="QPushButton" name="btnAnimFrameNext">
-      <property name="minimumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>&gt;|</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="6">
-     <widget class="QPushButton" name="btnAnimPause">
-      <property name="minimumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>||</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2" colspan="8">
-     <widget class="QScrollBar" name="hscrlAnimFrameBar">
-      <property name="minimumSize">
-       <size>
-        <width>581</width>
-        <height>16</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16</height>
-       </size>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="5">
-     <widget class="QPushButton" name="btnAnimPlay">
-      <property name="minimumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="2">
-     <widget class="QPushButton" name="btnAnimFramePrev">
-      <property name="minimumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>|&lt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2" rowspan="2" colspan="8">
-     <widget class="QFrame" name="fieldAnimFrameBar">
-      <property name="minimumSize">
-       <size>
-        <width>581</width>
-        <height>31</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>31</height>
-       </size>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::WheelFocus</enum>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QFrame" name="fieldStrips">
-      <property name="minimumSize">
-       <size>
-        <width>171</width>
-        <height>91</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>171</width>
-        <height>91</height>
-       </size>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::WheelFocus</enum>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0" rowspan="2">
-     <widget class="CStripFramesFrame" name="fieldStripFrames">
-      <property name="minimumSize">
-       <size>
-        <width>151</width>
-        <height>331</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>151</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::WheelFocus</enum>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2" colspan="8">
-     <widget class="CPreviewFrame" name="fieldAnimPreview">
-      <property name="minimumSize">
-       <size>
-        <width>581</width>
-        <height>312</height>
-       </size>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::WheelFocus</enum>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::WinPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="2" colspan="8">
-     <widget class="QFrame" name="fieldAnimFrames">
-      <property name="minimumSize">
-       <size>
-        <width>581</width>
-        <height>91</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>91</height>
-       </size>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::WheelFocus</enum>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="4">
-     <widget class="QLineEdit" name="editAnimSpeed">
-      <property name="minimumSize">
-       <size>
-        <width>51</width>
-        <height>20</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>51</width>
-        <height>20</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="9">
-     <widget class="QPushButton" name="btnZoomMinus">
-      <property name="minimumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>-</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="8">
-     <widget class="QPushButton" name="btnZoomPlus">
-      <property name="minimumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>31</width>
-        <height>23</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>+</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QScrollBar" name="vscrlStrips">
+    <property name="geometry">
+     <rect>
+      <x>775</x>
+      <y>69</y>
+      <width>16</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>16</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblFrames">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>50</y>
+      <width>64</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>64</width>
+      <height>13</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>47</width>
+      <height>13</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Frames:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="vscrlStripFrames">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>166</y>
+      <width>16</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>16</width>
+      <height>341</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAnims">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>30</y>
+      <width>64</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>64</width>
+      <height>13</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>47</width>
+      <height>13</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Animations:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnimFrameNext">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>166</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>&gt;|</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnimPause">
+    <property name="geometry">
+     <rect>
+      <x>356</x>
+      <y>166</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>||</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="hscrlAnimFrameBar">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>9</y>
+      <width>581</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>581</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnimPlay">
+    <property name="geometry">
+     <rect>
+      <x>319</x>
+      <y>166</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnimFramePrev">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>166</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>|&lt;</string>
+    </property>
+   </widget>
+   <widget class="CAnimFrameBar" name="fieldAnimFrameBar">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>31</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>581</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="fieldStrips">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>69</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>171</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>171</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="CStripFramesFrame" name="fieldStripFrames">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>166</y>
+      <width>151</width>
+      <height>367</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>151</width>
+      <height>331</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>151</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="CPreviewFrame" name="fieldAnimPreview">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>195</y>
+      <width>581</width>
+      <height>338</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>581</width>
+      <height>312</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="fieldAnimFrames">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>69</y>
+      <width>581</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>581</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editAnimSpeed">
+    <property name="geometry">
+     <rect>
+      <x>262</x>
+      <y>167</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>51</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnZoomMinus">
+    <property name="geometry">
+     <rect>
+      <x>738</x>
+      <y>166</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnZoomPlus">
+    <property name="geometry">
+     <rect>
+      <x>701</x>
+      <y>166</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>31</width>
+      <height>23</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -409,7 +522,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
@@ -426,6 +539,12 @@
    <class>CStripFramesFrame</class>
    <extends>QFrame</extends>
    <header>cstripframesframe.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CAnimFrameBar</class>
+   <extends>QFrame</extends>
+   <header>canimframebar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -1,14 +1,9 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#include <QString>
+#include <QVector>
 
-/*
-class QPainter;
-class QRectF;
-
-void drawText(QPainter * painter, qreal x, qreal y, Qt::Alignment flags,
-              const QString & text, QRectF * boundingRect = 0);
-*/
+class QImage;
+typedef QVector<QImage*> imgList_t;
 
 #endif // UTIL_H
