@@ -5,6 +5,8 @@
 #include <QDebug>
 #include <util.h>
 
+class QPainter;
+
 enum PARAM_TYPE
 {
 	EPT_FLOAT,
@@ -53,6 +55,13 @@ struct param_s
 
 typedef QVector<param_s *> parmvec_t;
 
+enum NODE_TYPE
+{
+	ENT_GROUP,
+	ENT_STRIP,
+	ENT_SOUND
+};
+
 class cBaseNode : public QObject
 {
 	Q_OBJECT
@@ -60,9 +69,21 @@ class cBaseNode : public QObject
 public:
 	explicit cBaseNode(QObject *parent = 0);
 	
+	NODE_TYPE m_Type;
+	
+	bool m_State;
+	bool m_Visible;
+	
 	QVector<cBaseNode*> m_Children;
 	QMap <QByteArray, parmvec_t *> m_ParmsMap;
+	
+	static cBaseNode * GetNewNode(void) {return new cBaseNode;}
+	static QImage *s_pIconsImg;
+	
+	virtual void DrawIcon(QPainter *p, QPoint &c);
+	
 signals:
+	
 	
 public slots:
 };

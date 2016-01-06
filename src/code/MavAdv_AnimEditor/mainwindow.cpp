@@ -37,7 +37,7 @@ void MainWindow::ProcessInput(void)
 {
     ui->fieldAnimPreview->ProcessInput();
 	ui->fieldStripFrames->ProcessInput();
-	
+	ui->fieldStrips->ProcessInput();
 	//TODO
 	
 }

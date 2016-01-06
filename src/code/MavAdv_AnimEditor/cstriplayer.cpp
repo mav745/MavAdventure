@@ -15,22 +15,19 @@ cStripLayer::~cStripLayer()
 		delete m_StripFrames[i];
 }
 
-void cStripLayer::LoadStrip(QString filename_numframes) //filename_numframes.png
+cStripLayer *cStripLayer::GetNewStrip(QString filename_numframes) //filename_numframes.png
 {
-	for(int i=m_StripFrames.size()-1;i>=0;i--)
-		delete m_StripFrames[i];
-	m_StripFrames.clear();
+	int w,h,numfr;
 	
 	QImage strip(filename_numframes);
 	if (strip.isNull())
 	{
 		//can't find file
-		return;
+		return NULL;
 	}
 	
-	int w,h, numfr;
-	h = strip.height();
-	w = strip.width();
+	w = strip.height();
+	h = strip.width();
 	QStringList parts = filename_numframes.split("_",QString::SkipEmptyParts);
 	if (parts.size() < 1)
 	{
@@ -39,7 +36,7 @@ void cStripLayer::LoadStrip(QString filename_numframes) //filename_numframes.png
 		if (!ok)
 		{
 			//user pressed 'Cancel'
-			return;
+			return NULL;
 		}
 	}
 	else
@@ -54,15 +51,20 @@ void cStripLayer::LoadStrip(QString filename_numframes) //filename_numframes.png
 			if (!ok)
 			{
 				//user pressed 'Cancel'
-				return;
+				return NULL;
 			}
 		}
 	}
 	if (numfr != 0)
-		w /= numfr;
+		h /= numfr;
 	
+	cStripLayer *pLayer = new cStripLayer;
+	pLayer->m_FrameH = h;
+	pLayer->m_FrameW = w;
+	pLayer->m_NumFrames = numfr;
 	for(int i=0; i<numfr; i++)
 	{
-		m_StripFrames.push_back( new QImage( strip.copy(i*w, 0, w, h) ) );
+		pLayer->m_StripFrames.push_back( new QImage( strip.copy(i*h, 0, h, w) ) );
 	}
+	return pLayer;
 }

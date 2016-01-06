@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     util.cpp \
     canimframebar.cpp \
     cbasenode.cpp \
-    cstriplayer.cpp
+    cstriplayer.cpp \
+    cnodearea.cpp
 
 HEADERS  += mainwindow.h \
     cpreviewframe.h \
@@ -28,6 +29,7 @@ HEADERS  += mainwindow.h \
     util.h \
     canimframebar.h \
     cbasenode.h \
-    cstriplayer.h
+    cstriplayer.h \
+    cnodearea.h
 
 FORMS    += mainwindow.ui

@@ -2,6 +2,7 @@
 #include "cstripframesframe.h"
 #include <mainwindow.h>
 #include <ui_mainwindow.h>
+#include <cbasenode.h>
 
 #include <QDir>
 #include <QPainter>
@@ -95,7 +96,12 @@ CStripFramesFrame::~CStripFramesFrame()
     {
         delete m_FrameList->at(i);
     }
-    delete m_FrameList;
+	delete m_FrameList;
+}
+
+void CStripFramesFrame::Reload(cBaseNode *pLayer)
+{
+	
 }
 
 void CStripFramesFrame::paintEvent(QPaintEvent *e)

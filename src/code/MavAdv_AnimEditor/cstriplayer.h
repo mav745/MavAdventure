@@ -12,9 +12,12 @@ public:
 	explicit cStripLayer(QObject *parent = 0);
 	~cStripLayer();
 	
-	void LoadStrip(QString filename_numframes);
-	
+	int m_FrameH;
+	int m_FrameW;
+	int m_NumFrames;
 	imgList_t m_StripFrames;
+	
+	static cStripLayer* GetNewStrip(QString filename_numframes);
 };
 
 #endif // CSTRIPLAYER_H

@@ -8,6 +8,8 @@
 #define TOP_SPACING 8
 #define FRAME_SPACING 16
 
+class cBaseNode;
+
 class CStripFramesFrame : public QFrame
 {
     Q_OBJECT
@@ -29,9 +31,9 @@ class CStripFramesFrame : public QFrame
 		
         ~CStripFramesFrame();
     public slots:
-        void Reload(cStripLayer *pLayer);
+        void Reload(cBaseNode *pLayer);
     protected:
-            void paintEvent(QPaintEvent *e);
+		void paintEvent(QPaintEvent *e);
 };
 
 #endif // CSTRIPFRAMESFRAME_H
