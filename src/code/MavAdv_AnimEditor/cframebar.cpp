@@ -1,11 +1,11 @@
-#include "canimframebar.h"
+#include "cframebar.h"
 
-CAnimFrameBar::CAnimFrameBar(QWidget *parent) : QFrame(parent)
+cFrameBar::cFrameBar(QWidget *parent) : QFrame(parent)
 {
 	
 }
 
-void CAnimFrameBar::paintEvent(QPaintEvent *e)
+void cFrameBar::paintEvent(QPaintEvent *e)
 {
 	QFrame::paintEvent(e);
 }

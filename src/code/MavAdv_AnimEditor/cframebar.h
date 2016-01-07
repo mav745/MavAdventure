@@ -3,10 +3,10 @@
 
 #include <QFrame>
 
-class CAnimFrameBar : public QFrame
+class cFrameBar : public QFrame
 {
 public:
-	explicit CAnimFrameBar(QWidget *parent = 0);
+	explicit cFrameBar(QWidget *parent = 0);
 protected:
 	void paintEvent(QPaintEvent *e);
 };

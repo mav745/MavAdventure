@@ -1,18 +1,17 @@
-#include "caframeswidget.h"
+#include "cframegrid.h"
 #include <QDropEvent>
 #include <QMimeData>
 #include <QDebug>
 
-cAFramesWidget::cAFramesWidget(QWidget *parent) : QTableWidget(parent)
+cFrameGrid::cFrameGrid(QWidget *parent) : QTableWidget(parent)
 {
 	
 }
 
-
-void cAFramesWidget::dropEvent(QDropEvent *e)
+void cFrameGrid::dropEvent(QDropEvent *e)
 {
 	
-	if (e->source()->objectName() != "listStripFrames")
+	if (e->source()->objectName() != "stripFrameList")
 	{
 		e->ignore();
 		return;
@@ -42,7 +41,7 @@ void cAFramesWidget::dropEvent(QDropEvent *e)
 	e->accept();
 }
 
-void cAFramesWidget::dragEnterEvent(QDragEnterEvent *e)
+void cFrameGrid::dragEnterEvent(QDragEnterEvent *e)
 {
 	e->accept();
 }

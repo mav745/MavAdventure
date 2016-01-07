@@ -1,4 +1,4 @@
-#include "cpreviewframe.h"
+#include "cpreviewarea.h"
 #include <mainwindow.h>
 #include <ui_mainwindow.h>
 
@@ -12,7 +12,7 @@ extern QPoint g_MousePos;
 extern QPoint g_MouseOfs, g_MousePrev;
 extern int g_MouseWheel;
 
-CPreviewFrame::CPreviewFrame(QWidget *parent) : QFrame(parent)
+cPreviewArea::cPreviewArea(QWidget *parent) : QFrame(parent)
 {
 	m_Init = false;
     m_Scroll = QPoint(0, 0);
@@ -21,7 +21,7 @@ CPreviewFrame::CPreviewFrame(QWidget *parent) : QFrame(parent)
 }
 
 
-void CPreviewFrame::resizeEvent(QResizeEvent *e)
+void cPreviewArea::resizeEvent(QResizeEvent *e)
 {
 	if (!m_Init)
 	{
@@ -30,7 +30,7 @@ void CPreviewFrame::resizeEvent(QResizeEvent *e)
 	}
 }
 
-void CPreviewFrame::ProcessInput(void)
+void cPreviewArea::ProcessInput(void)
 {
     if(hasFocus())
     {
@@ -71,7 +71,7 @@ void CPreviewFrame::ProcessInput(void)
     }
 }
 
-void CPreviewFrame::paintEvent(QPaintEvent *e)
+void cPreviewArea::paintEvent(QPaintEvent *e)
 {
     QBrush Brush(m_Bkg);
     QPainter p(this);

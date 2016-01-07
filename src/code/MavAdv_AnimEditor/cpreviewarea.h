@@ -3,7 +3,7 @@
 
 #include <QFrame>
 
-class CPreviewFrame : public QFrame
+class cPreviewArea : public QFrame
 {
 	Q_OBJECT
 	
@@ -13,7 +13,7 @@ class CPreviewFrame : public QFrame
         QPoint m_Scroll;
         QImage m_Bkg;
         int m_Scale;
-        explicit CPreviewFrame(QWidget *parent = 0);
+        explicit cPreviewArea(QWidget *parent = 0);
         void ProcessInput(void);
 
     protected:

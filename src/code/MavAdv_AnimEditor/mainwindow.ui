@@ -241,7 +241,7 @@
      <string>|&lt;</string>
     </property>
    </widget>
-   <widget class="CAnimFrameBar" name="fieldAnimFrameBar">
+   <widget class="cFrameBar" name="fieldAnimFrameBar">
     <property name="geometry">
      <rect>
       <x>188</x>
@@ -275,7 +275,7 @@
      <enum>QFrame::Sunken</enum>
     </property>
    </widget>
-   <widget class="CPreviewFrame" name="fieldAnimPreview">
+   <widget class="cPreviewArea" name="fieldAnimPreview">
     <property name="geometry">
      <rect>
       <x>188</x>
@@ -453,7 +453,7 @@
      <string>Group</string>
     </property>
    </widget>
-   <widget class="QTreeWidget" name="treeWidget">
+   <widget class="QTreeWidget" name="stripList">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -542,7 +542,7 @@
      </property>
     </column>
    </widget>
-   <widget class="cAFramesWidget" name="tableWidget">
+   <widget class="cFrameGrid" name="frameGrid">
     <property name="geometry">
      <rect>
       <x>188</x>
@@ -628,7 +628,7 @@
     <column/>
     <column/>
    </widget>
-   <widget class="cStripFrameWidget" name="listStripFrames">
+   <widget class="QListWidget" name="stripFrameList">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -686,26 +686,21 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>CPreviewFrame</class>
+   <class>cFrameBar</class>
    <extends>QFrame</extends>
-   <header>cpreviewframe.h</header>
+   <header>cframebar.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>CAnimFrameBar</class>
+   <class>cPreviewArea</class>
    <extends>QFrame</extends>
-   <header>canimframebar.h</header>
+   <header>cpreviewarea.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>cAFramesWidget</class>
+   <class>cFrameGrid</class>
    <extends>QTableWidget</extends>
-   <header>caframeswidget.h</header>
-  </customwidget>
-  <customwidget>
-   <class>cStripFrameWidget</class>
-   <extends>QListWidget</extends>
-   <header>cstripframewidget.h</header>
+   <header>cframegrid.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

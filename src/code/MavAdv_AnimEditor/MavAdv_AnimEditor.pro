@@ -16,23 +16,19 @@ DESTDIR = ../../../build
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    cpreviewframe.cpp \
     util.cpp \
-    canimframebar.cpp \
     cbasenode.cpp \
     cstriplayer.cpp \
-    cnodearea.cpp \
-    caframeswidget.cpp \
-    cstripframewidget.cpp
+    cframegrid.cpp \
+    cframebar.cpp \
+    cpreviewarea.cpp
 
 HEADERS  += mainwindow.h \
-    cpreviewframe.h \
     util.h \
-    canimframebar.h \
     cbasenode.h \
     cstriplayer.h \
-    cnodearea.h \
-    caframeswidget.h \
-    cstripframewidget.h
+    cframegrid.h \
+    cframebar.h \
+    cpreviewarea.h
 
 FORMS    += mainwindow.ui

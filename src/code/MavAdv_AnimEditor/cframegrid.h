@@ -4,11 +4,11 @@
 #include <QTableWidget>
 #include <QWidget>
 
-class cAFramesWidget : public QTableWidget
+class cFrameGrid : public QTableWidget
 {
 	Q_OBJECT
 public:
-	explicit cAFramesWidget (QWidget *parent = 0);
+	explicit cFrameGrid (QWidget *parent = 0);
 	
 protected:
 	void dropEvent(QDropEvent *e);

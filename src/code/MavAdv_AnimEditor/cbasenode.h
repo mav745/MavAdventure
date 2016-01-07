@@ -84,8 +84,8 @@ public:
 	static cBaseNode * GetNewNode(void) {return new cBaseNode;}
 	static QImage *s_pIconsImg;
 	
-	void DrawIcon(QPainter *p, QPoint &c);
-	bool Select(const QPoint &c);
+	//void DrawIcon(QPainter *p, QPoint &c);
+	//bool Select(const QPoint &c);
 	
 signals:
 	

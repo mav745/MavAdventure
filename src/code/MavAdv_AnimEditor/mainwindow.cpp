@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "cstripframewidget.h"
+#include "cframegrid.h"
 #include <QFileDialog>
 #include <cstriplayer.h>
 #include <qevent.h>
@@ -33,6 +33,9 @@ MainWindow::MainWindow(QWidget *parent) :
 	g_Timer->setSingleShot(false);
 	g_Timer->start(1000/60);
 	
+	ui->stripFrameList->setGridSize(QSize(171,64));
+	ui->stripFrameList->setIconSize(QSize(171,64));
+	
 	QPixmap Strip(QDir::currentPath()+"/res/sprites/s_mav_run.png");
 	
 	for(int i=0; i<16; i++)
@@ -42,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
 		item1->setIcon(QIcon(*pImg));
 		item1->setText(QString::number(i));
 		item1->setData(3,(int)pImg);
-		ui->listStripFrames->addItem(item1);
+		ui->stripFrameList->addItem(item1);
 	}
 	
 	
@@ -51,19 +54,19 @@ MainWindow::MainWindow(QWidget *parent) :
 //	item1->setData(0,(int)pIco);
 //	qDebug()<<"pIco"<<pIco;
 
-//	ui->listStripFrames->addItem(item1);
+//	ui->stripFrameList->addItem(item1);
 
 //	QListWidgetItem *item2 = new QListWidgetItem;
 //	QIcon *pIco2 = new QIcon(QDir::currentPath()+"/res/editor/anim_edit/folder_icon.png");
 //	item2->setData(0,(int)pIco2);
 
-//	ui->listStripFrames->addItem(item2);
+//	ui->stripFrameList->addItem(item2);
 
 //	QTreeWidgetItem *item1 = new QTreeWidgetItem;
 //	item1->setText(0,"group1");
 //	item1->setIcon(0,QIcon(QDir::currentPath()+"/res/editor/anim_edit/folder_icon.png"));
 //	item1->setIcon(1,QIcon(QDir::currentPath()+"/res/editor/anim_edit/eye_icon.png"));
-//	ui->treeWidget->addTopLevelItem(item1);
+//	ui->stripList->addTopLevelItem(item1);
 
 //	QTreeWidgetItem *item2 = new QTreeWidgetItem;
 //	item2->setText(0,"new_item");
@@ -75,7 +78,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //	item3->setText(0,"group2");
 //	item3->setIcon(0,QIcon(QDir::currentPath()+"/res/editor/anim_edit/folder_icon.png"));
 //	item3->setIcon(1,QIcon(QDir::currentPath()+"/res/editor/anim_edit/eye_icon.png"));
-//	ui->treeWidget->addTopLevelItem(item3);
+//	ui->stripList->addTopLevelItem(item3);
 }
 
 void MainWindow::ProcessInput(void)
@@ -184,15 +187,15 @@ void MainWindow::on_b_StripAdd_clicked()
 		pNewStrip->setText(0,pNewStrip->m_Name);
 		pNewStrip->setIcon(0,QIcon(QDir::currentPath()+"/res/editor/anim_edit/strip_icon.png"));
 		pNewStrip->setIcon(1,QIcon(QDir::currentPath()+"/res/editor/anim_edit/eye_icon.png"));
-		ui->treeWidget->addTopLevelItem(pNewStrip);
+		ui->stripList->addTopLevelItem(pNewStrip);
 	}
 }
 
 void MainWindow::on_b_StripGroup_clicked()
 {
-	QList<QTreeWidgetItem*> selected = ui->treeWidget->selectedItems();
+	QList<QTreeWidgetItem*> selected = ui->stripList->selectedItems();
 	
 	//selected[i]->parent();
 	
-	//ui->treeWidget->indexOfTopLevelItem()
+	//ui->stripList->indexOfTopLevelItem()
 }
