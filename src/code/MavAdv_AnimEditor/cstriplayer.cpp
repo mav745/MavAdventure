@@ -1,12 +1,14 @@
 #include <mainwindow.h>
 #include "cstriplayer.h"
 
+#include <QFile>
+#include <QFileInfo>
 #include <QImage>
 #include <QInputDialog>
 
-cStripLayer::cStripLayer(QObject *parent) : cBaseNode(parent)
+cStripLayer::cStripLayer(int type) : cBaseNode(type)
 {
-	
+	m_Type = ENT_STRIP;
 }
 
 cStripLayer::~cStripLayer()
@@ -32,7 +34,7 @@ cStripLayer *cStripLayer::GetNewStrip(QString filename_numframes) //filename_num
 	if (parts.size() < 1)
 	{
 		bool ok;
-		numfr = QInputDialog::getInt(MainWindow::s_WND, tr("Input numframes"),tr(""), 1, 1, INT_MAX,1,&ok);
+		numfr = QInputDialog::getInt(MainWindow::s_WND, "Input numframes","", 1, 1, INT_MAX,1,&ok);
 		if (!ok)
 		{
 			//user pressed 'Cancel'
@@ -47,7 +49,7 @@ cStripLayer *cStripLayer::GetNewStrip(QString filename_numframes) //filename_num
 		numfr = lastpart.toInt(&ok);
 		if (!ok)
 		{
-			numfr = QInputDialog::getInt(MainWindow::s_WND, tr("Input numframes"),tr(""), 1, 1, INT_MAX,1,&ok);
+			numfr = QInputDialog::getInt(MainWindow::s_WND, "Input numframes","", 1, 1, INT_MAX,1,&ok);
 			if (!ok)
 			{
 				//user pressed 'Cancel'
@@ -62,6 +64,7 @@ cStripLayer *cStripLayer::GetNewStrip(QString filename_numframes) //filename_num
 	pLayer->m_FrameH = h;
 	pLayer->m_FrameW = w;
 	pLayer->m_NumFrames = numfr;
+	pLayer->m_Name = QFileInfo(filename_numframes).fileName();
 	for(int i=0; i<numfr; i++)
 	{
 		pLayer->m_StripFrames.push_back( new QImage( strip.copy(i*h, 0, h, w) ) );

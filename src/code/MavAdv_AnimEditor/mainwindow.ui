@@ -88,31 +88,6 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QScrollBar" name="vscrlStripFrames">
-    <property name="geometry">
-     <rect>
-      <x>166</x>
-      <y>166</y>
-      <width>16</width>
-      <height>361</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>16</width>
-      <height>341</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16</width>
-      <height>16777215</height>
-     </size>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
    <widget class="QLabel" name="lblAnims">
     <property name="geometry">
      <rect>
@@ -300,74 +275,6 @@
      <enum>QFrame::Sunken</enum>
     </property>
    </widget>
-   <widget class="cNodeArea" name="fieldStrips">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>69</y>
-      <width>171</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>171</width>
-      <height>91</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>171</width>
-      <height>91</height>
-     </size>
-    </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::WheelFocus</enum>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-   </widget>
-   <widget class="CStripFramesFrame" name="fieldStripFrames">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>166</y>
-      <width>151</width>
-      <height>367</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>151</width>
-      <height>331</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>151</width>
-      <height>16777215</height>
-     </size>
-    </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::WheelFocus</enum>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-   </widget>
    <widget class="CPreviewFrame" name="fieldAnimPreview">
     <property name="geometry">
      <rect>
@@ -391,40 +298,6 @@
     </property>
     <property name="frameShape">
      <enum>QFrame::WinPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-   </widget>
-   <widget class="QFrame" name="fieldAnimFrames">
-    <property name="geometry">
-     <rect>
-      <x>188</x>
-      <y>69</y>
-      <width>581</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>581</width>
-      <height>91</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>91</height>
-     </size>
-    </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::WheelFocus</enum>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
@@ -580,6 +453,224 @@
      <string>Group</string>
     </property>
    </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="autoScroll">
+     <bool>false</bool>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="dragDropMode">
+     <enum>QAbstractItemView::InternalMove</enum>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectItems</enum>
+    </property>
+    <property name="indentation">
+     <number>8</number>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>true</bool>
+    </property>
+    <property name="uniformRowHeights">
+     <bool>true</bool>
+    </property>
+    <property name="animated">
+     <bool>true</bool>
+    </property>
+    <property name="allColumnsShowFocus">
+     <bool>false</bool>
+    </property>
+    <property name="headerHidden">
+     <bool>true</bool>
+    </property>
+    <property name="columnCount">
+     <number>2</number>
+    </property>
+    <attribute name="headerVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="headerDefaultSectionSize">
+     <number>147</number>
+    </attribute>
+    <attribute name="headerHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerMinimumSectionSize">
+     <number>147</number>
+    </attribute>
+    <attribute name="headerShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">2</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="cAFramesWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>70</y>
+      <width>581</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="autoScroll">
+     <bool>false</bool>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="dragDropMode">
+     <enum>QAbstractItemView::DropOnly</enum>
+    </property>
+    <property name="defaultDropAction">
+     <enum>Qt::IgnoreAction</enum>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::SolidLine</enum>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <property name="cornerButtonEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="rowCount">
+     <number>1</number>
+    </property>
+    <property name="columnCount">
+     <number>12</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>24</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>16</number>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>16</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>16</number>
+    </attribute>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
+   <widget class="cStripFrameWidget" name="listStripFrames">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>172</y>
+      <width>171</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="dragDropMode">
+     <enum>QAbstractItemView::DragOnly</enum>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectItems</enum>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
+    </property>
+    <property name="spacing">
+     <number>16</number>
+    </property>
+    <property name="viewMode">
+     <enum>QListView::ListMode</enum>
+    </property>
+    <property name="selectionRectVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -601,22 +692,20 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>CStripFramesFrame</class>
-   <extends>QFrame</extends>
-   <header>cstripframesframe.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>CAnimFrameBar</class>
    <extends>QFrame</extends>
    <header>canimframebar.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>cNodeArea</class>
-   <extends>QFrame</extends>
-   <header>cnodearea.h</header>
-   <container>1</container>
+   <class>cAFramesWidget</class>
+   <extends>QTableWidget</extends>
+   <header>caframeswidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>cStripFrameWidget</class>
+   <extends>QListWidget</extends>
+   <header>cstripframewidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

@@ -6,10 +6,9 @@
 
 class cStripLayer : public cBaseNode
 {
-	Q_OBJECT
 	
 public:
-	explicit cStripLayer(QObject *parent = 0);
+	explicit cStripLayer(int type = Type);
 	~cStripLayer();
 	
 	int m_FrameH;

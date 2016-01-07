@@ -12,12 +12,10 @@ class cNodeArea : public QFrame
 public:
 	explicit cNodeArea(QWidget *parent = 0);
 	
-	QVector<cBaseNode*>m_Nodes;
+	QVector<cBaseNode*> m_FileChildren; //for file hierarchy
 	
 	void ProcessInput(void);
-	
-	
-	
+
 signals:
 	void selected(cBaseNode *pLayer);
 protected:

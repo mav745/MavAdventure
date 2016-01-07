@@ -1,7 +1,7 @@
 #ifndef CBASENODE_H
 #define CBASENODE_H
 
-#include <QObject>
+#include <QTreeWidgetItem>
 #include <QDebug>
 #include <util.h>
 
@@ -62,25 +62,30 @@ enum NODE_TYPE
 	ENT_SOUND
 };
 
-class cBaseNode : public QObject
+class cBaseNode : public QTreeWidgetItem
 {
-	Q_OBJECT
 	
 public:
-	explicit cBaseNode(QObject *parent = 0);
+	explicit cBaseNode(int type = Type);
 	
 	NODE_TYPE m_Type;
 	
 	bool m_State;
 	bool m_Visible;
 	
-	QVector<cBaseNode*> m_Children;
+	QString m_Name;
+	
+	QVector<cBaseNode*> m_FileChildren; //for file hierarchy
+	
+	QVector<cBaseNode*> m_Children; //for coords hierarchy
+	
 	QMap <QByteArray, parmvec_t *> m_ParmsMap;
 	
 	static cBaseNode * GetNewNode(void) {return new cBaseNode;}
 	static QImage *s_pIconsImg;
 	
-	virtual void DrawIcon(QPainter *p, QPoint &c);
+	void DrawIcon(QPainter *p, QPoint &c);
+	bool Select(const QPoint &c);
 	
 signals:
 	

@@ -38,6 +38,11 @@ protected:
 	void mouseReleaseEvent(QMouseEvent *e);
 	void mouseMoveEvent(QMouseEvent *e);
 	void wheelEvent(QWheelEvent *e);
+private slots:
+	void on_b_StripAdd_clicked();
+	
+	void on_b_StripGroup_clicked();
+	
 private:
 	Ui::MainWindow *ui;
 };
